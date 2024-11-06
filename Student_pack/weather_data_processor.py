@@ -5,7 +5,15 @@ import logging
 from data_ingestion import read_from_web_CSV
 
 class WeatherDataProcessor:
-    """Weather Data Processor class."""
+    """
+    Weather Data Processor class
+
+    used to apply all needed processes on Weather Data
+    * weather_station_mapping.
+    * extract_measurement.
+    * process_messages.
+    * calculate_means.
+    """
     def __init__(self, config_params, logging_level="INFO"): # Now we're passing in the confi_params dictionary already
         self.weather_station_data = config_params['weather_csv_path']
         self.patterns = config_params['regex_patterns']

@@ -3,7 +3,15 @@ from data_ingestion import create_db_engine, query_data, read_from_web_CSV
 import logging
 
 class FieldDataProcessor:
-    """Field Data Processor class"""
+    """
+    Field Data Processor class
+
+    used to apply all needed processes on Field Data
+    * ingest_sql_data.
+    * rename_columns.
+    * apply_corrections.
+    * weather_station_mapping.
+    """
     def __init__(self, config_params, logging_level="INFO"): # When we instantiate this class, we can optionally specify what logs we want to see
 
         # Initialising class with attributes we need. Refer to the code above to understand how each attribute relates to the code
